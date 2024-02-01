@@ -1,0 +1,16 @@
+#!/bin/bash
+# List of URLs to scan.
+urls=(
+    "https://example0.com/"
+    "https://example1.com/"
+    "https://example2.com/"
+
+)
+
+# Iterate over each URL in the list.
+for url in "${urls[@]}"
+do
+    echo "Scanning $url ..."
+    dirb "$url" # Execute Dirb for the current URL.
+    echo "------------------------------"
+done
