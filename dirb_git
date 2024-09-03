@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Lista de URLs a escanear
+urls=(
+
+     "https://formaciowp.host3ip.eu/login/index.php"
+
+
+)
+
+# Iterar sobre cada URL en la lista
+for url in "${urls[@]}"
+do
+    echo "Escaneando $url ..."
+    dirb "$url"  -X .git # Ejecutar Dirb para la URL actual
+    echo "------------------------------"
+done
